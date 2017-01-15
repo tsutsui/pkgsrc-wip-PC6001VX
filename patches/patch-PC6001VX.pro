@@ -1,6 +1,7 @@
 $NetBSD$
 
 - pull following updates (use pkg-config more properly) from the upstream:
+ https://github.com/eighttails/PC6001VX/commit/19367cdbaf4b624a64a962168767ae9fb1aef8c4
  https://github.com/eighttails/PC6001VX/commit/d4a7179f34a6eb454bce898815ab4f5ab767577b
  https://github.com/eighttails/PC6001VX/commit/fd695b875266be21fe6be22a918be6ea7cdc7f53
  https://github.com/eighttails/PC6001VX/commit/179408dc05377ea3c19f504f382436874466efa5
@@ -43,7 +44,7 @@ $NetBSD$
  
 -linux{
 +#Configuration for UNIX variants
-+linux|unix {
++unix {
  #Configuration for Android
 -android{
 -DEFINES += NOSINGLEAPP NOJOYSTICK NOMONITOR NOAVI ALWAYSFULLSCREEN AUTOSUSPEND USE_QGLWIDGET
@@ -80,7 +81,7 @@ $NetBSD$
  }
 -} else {
 -!contains(DEFINES, NOJOYSTICK) {
-+linux|unix {
++unix {
  QMAKE_CXXFLAGS += $$system(sdl2-config --cflags)
  LIBS += $$system(sdl2-config --libs)
  }
@@ -103,7 +104,7 @@ $NetBSD$
 +win32 {
 +LIBS += -lavformat -lavcodec -lswscale -lavutil -lswresample -lvorbisenc -lvorbis -logg -lvpx
 +}
-+linux|unix {
++unix {
 +QMAKE_CXXFLAGS += $$system(pkg-config --cflags libavformat libavcodec libswscale libavutil libswresample)
 +LIBS += $$system(pkg-config --libs libavformat libavcodec libswscale libavutil libswresample)
 +}
