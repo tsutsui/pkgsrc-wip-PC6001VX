@@ -1,6 +1,7 @@
 # $NetBSD$
 
-DISTNAME=		PC6001VX_2.30.0_src
+VERSION=		2.30.0
+DISTNAME=		PC6001VX_${VERSION}_src
 PKGNAME=		${DISTNAME:S/_src//:S/_/-/}
 CATEGORIES=		emulators
 MASTER_SITES=		http://eighttails.up.seesaa.net/bin/
