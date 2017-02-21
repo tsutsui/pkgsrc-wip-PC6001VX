@@ -1,4 +1,4 @@
-$NetBSD$
+$NetBSD: patch-PC6001VX.pro,v 1.1 2017/01/15 11:11:01 tsutsui Exp $
 
 - pull following updates (use pkg-config more properly) from the upstream:
  https://github.com/eighttails/PC6001VX/commit/19367cdbaf4b624a64a962168767ae9fb1aef8c4

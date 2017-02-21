@@ -1,8 +1,9 @@
-# $NetBSD$
+# $NetBSD: Makefile,v 1.6 2017/02/14 21:30:21 joerg Exp $
 
 VERSION=		2.30.0
 DISTNAME=		PC6001VX_${VERSION}_src
 PKGNAME=		${DISTNAME:S/_src//:S/_/-/}
+PKGREVISION=		4
 CATEGORIES=		emulators
 MASTER_SITES=		http://eighttails.up.seesaa.net/bin/
 
@@ -11,6 +12,7 @@ HOMEPAGE=		http://eighttails.seesaa.net/
 COMMENT=		Cross platform PC-6001 emulator
 LICENSE=		gnu-lgpl-v2.1
 
+USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 
